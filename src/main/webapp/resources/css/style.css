@@ -72,12 +72,16 @@
 	background-color: lime;
 }
 
-.footer {
+footer {
 	width: 100%;
-	height: 50px;
-	text-align: center;
-	background-color: orange;
-	clear: both;
+	height: 110px;
+    bottom: 0;
+    left: 0;
+	position : absolute;
+}
+
+.paddingB110 {
+    padding-bottom : 110px;
 }
 
 .menu, .content {

@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="resources/assets/css/main.css" />
 </head>
 <body>
-    <h1><a href="index.html">Future Imperfect</a></h1>
+    <h1><a href="index.html">LEE YONG GYU</a></h1>
     <nav class="links">
       <ul>
-        <li><a href="#">Menu1</a></li>
-        <li><a href="#">Menu2</a></li>
-        <li><a href="#">Menu3</a></li>
-        <li><a href="#">Menu4</a></li>
-        <li><a href="#">Menu5</a></li>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
       </ul>
     </nav>
     <nav class="main">

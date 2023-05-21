@@ -3492,7 +3492,20 @@ input, select, textarea {
 	}
 
 /* Footer */
+html, body {
+    height: 100%
+}
 
+#wrapper {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+footer {
+    position: relative; (absolute -> relative)
+    transform: translatY(-100%);
+}
 	#footer .icons {
 		color: #aaaaaa;
 	}

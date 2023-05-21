@@ -4,7 +4,6 @@
 <html>
 <head>
 	<title>Title</title>
-    <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="resources/assets/css/main.css" />
@@ -15,11 +14,13 @@
             <tiles:insertAttribute name="header"/>
         </header>
         <div id="main">
-            <tiles:insertAttribute name="body"/>
-        </div>
-        <div class="footer">
-            <tiles:insertAttribute name="footer"/>
+            <section class ="paddingB110">
+                <tiles:insertAttribute name="body"/>
+            </section>
         </div>
 	</div>
+    <footer>
+        <tiles:insertAttribute name="footer"/>
+    </footer>
 </body>
 </html>
