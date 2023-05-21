@@ -4,18 +4,17 @@
 <html>
 <head>
 	<title>Title</title>
-	<tiles:insertAttribute name="include"/>
     <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="resources/assets/css/main.css" />
 </head>
-<body>
-    <div style="width:100%; height:100%;">
-        <div class="header">
+<body class="is-preload">
+    <div id="wrapper">
+        <header id="header">
             <tiles:insertAttribute name="header"/>
-        </div>
-        <div class="menu">
-            <tiles:insertAttribute name="side"/>
-        </div>
-        <div class="content">
+        </header>
+        <div id="main">
             <tiles:insertAttribute name="body"/>
         </div>
         <div class="footer">
