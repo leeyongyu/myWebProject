@@ -1,8 +1,8 @@
 package myWebProject.web.controller;
 
 import lombok.RequiredArgsConstructor;
-import myWebProject.web.domain.Member;
 import myWebProject.web.repository.MemberRepository;
+import myWebProject.web.service.PostService;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -16,10 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 public class MainController {
 
     private final MemberRepository memberRepository;
+    private final PostService postService;
 
     @GetMapping
     public String index(HttpServletRequest request, Model model) {
-
+        postService.createPost(); // TODO
         model.addAttribute("test", "테스트");
         return "index";
     }
@@ -36,17 +37,5 @@ public class MainController {
 
         model.addAttribute("test", "테스트");
         return "samplePage";
-    }
-
-    @GetMapping("dashboard")
-    public String dashboard(Model model) {
-
-        Member member = new Member();
-        member.setUsername("홍길동");
-        memberRepository.save(member);
-
-        model.addAttribute("member",member);
-
-        return "dashboard";
     }
 }

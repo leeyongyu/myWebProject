@@ -156,4 +156,153 @@ footer {
   background-color:transparent;
 }
 
+#mArticle {
+    position: relative;
+    max-width: 800px;
+    padding: 0 0 0;
+    margin: 0 auto;
+}
+.recruit_intro {
+    padding: 0 18px;
+}
+.recruit_intro .tit_intro {
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 49px 6px 41px;
+    font-size: 32px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: #000;
+}
+.recruit_list {
+    margin-top: 30px;
+    min-height: 330px;
+}
+.recruit_list .list_board {
+    margin: 0 -18px;
+}
+dl, li, menu, ol, ul {
+    list-style: none;
+}
+.recruit_list .list_board .link_tit {
+    position: relative;
+    display: block;
+    padding: 22.5px 75px 22.5px 24px;
+    font-weight: 700;
+}
+.recruit_list .list_board .tit_board, .recruit_list .list_board .tit_date {
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+.recruit_list .list_board .tit_date {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 16px;
+    line-height: normal;
+    text-align: right;
+    color: red;
+}
+.recruit_list .list_board .txt_desc {
+    font-size: 13px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #888;
+}
+.list_board .txt_desc {
+    display: block;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #888;
+}
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.main_search .search_box {
+    position: relative;
+    margin-bottom: 12px;
+}
+.main_search .box_form {
+    position: relative;
+    padding: 17px 41px 17px 50px;
+    border-radius: 10px;
+    background-color: #eee;
+    height: 70px;
+}
+.main_search .box_form .tf_search {
+    width: 100%;
+    outline: 0 none;
+    border: 0;
+    font-size: 17px;
+    line-height: 24px;
+    color: #111;
+    background-color: transparent;
+    margin-left:30px;
+}
+.main_search .box_form .btn_search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 18px 10px 18px 16px;
+    height: 70px;
+}
+.main_search .box_form .btn_search .ico_search {
+    width: 40px;
+    height: 40px;
+    background-image: url(/images/career_search_button2.png);
+}
+.btn_search, .ico_accordion, .ico_delete, .ico_search {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1px;
+    line-height: 0;
+    color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+field-set, img {
+    border: 0;
+}
+.main_search .sel_form {
+    position: relative;
+    padding: 18.5px 18px 18.5px 19px;
+    border-radius: 10px;
+    background-color: #eee;
+    height : 70px;
+}
+.main_search .sel_form .sel_search {
+    width: 100%;
+    outline: 0 none;
+    border: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #040404;
+    background-color: transparent;
+}
+button, input, select, textarea {
+    vertical-align: middle;
+    font-size: 100%;
+}
+
+
 
