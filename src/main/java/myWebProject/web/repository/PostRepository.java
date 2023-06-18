@@ -26,8 +26,17 @@ public class PostRepository implements IPostRepository{
                 .select(post)
                 .from(post)
                 .join(post.postSpec, postSpec).fetchJoin()
-                .where(post.postSpec.postSpecCode.eq("01"))
+                .where(post.postSpec.postSpecCode.eq("01")) // 01.경력사항게시판
                 .fetch();
+    }
+    @Override
+    public Post findPostSpec(Long id){
+        return queryFactory
+                .select(post)
+                .from(post)
+                .join(post.postSpec, postSpec).fetchJoin()
+                .where(post.postSpec.postSpecCode.eq("01")
+                .and(post.postId.eq(id))).fetchOne();
     }
 
 

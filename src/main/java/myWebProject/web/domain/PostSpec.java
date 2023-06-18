@@ -21,7 +21,8 @@ public class PostSpec {
 
     private String postSpecCode;
     private String postComboName;
-    private String content;
+    private String contentTitle; // 소제목
+    private String content; // 내용
     private String startDate;
     private String endDate;
     private Timestamp firstRegTime;

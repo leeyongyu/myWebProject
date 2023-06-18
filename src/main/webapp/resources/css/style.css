@@ -303,6 +303,70 @@ button, input, select, textarea {
     vertical-align: middle;
     font-size: 100%;
 }
-
+.recruit_detail {
+    padding: 0 24px;
+}
+.recruit_detail .tit_intro {
+    padding: 50px 0 30px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.29;
+    color: #000;
+}
+.recruit_detail .info_desc, .recruit_detail .tit_intro {
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+}
+.recruit_detail .info_desc {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.23;
+    color: #888;
+}
+.recruit_detail .cont_desc {
+    min-height: 100vh;
+    padding: 5px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    font-weight: 500;
+    margin-top: 10vh;
+}
+.recruit_detail .desc_cont {
+    position: relative!important;
+}
+.recruit_detail .tit {
+    display: none;
+    display: block!important;
+    position: absolute!important;
+    top: -59px!important;
+    padding: 24px 0!important;
+    text-align: left!important;
+    width: 100%!important;
+    border: none!important;
+    color: #000!important;
+    font-weight: 700!important;
+    font-size: 17px!important;
+}
+.recruit_detail .cont {
+    margin-top: 25px!important;
+    padding-left: 0!important;
+}
+.recruit_detail .item_card {
+    padding: 15px 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+    background-color: #eee;
+    font-size: 14px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    color: #222;
+}
 
 

@@ -9,4 +9,5 @@ import java.util.List;
 public interface IPostRepository {
     void save(Post post);
     List<Post> findAll();
+    Post findPostSpec(Long id);
 }

@@ -24,6 +24,8 @@ public class QPostSpec extends EntityPathBase<PostSpec> {
 
     public final StringPath content = createString("content");
 
+    public final StringPath contentTitle = createString("contentTitle");
+
     public final StringPath endDate = createString("endDate");
 
     public final DateTimePath<java.sql.Timestamp> firstRegTime = createDateTime("firstRegTime", java.sql.Timestamp.class);

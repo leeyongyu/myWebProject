@@ -11,9 +11,7 @@
     <h1><a href="/">LEE YONG GYU</a></h1>
     <nav class="links">
       <ul>
-        <li><a href="career">경력사항</a></li>
-        <li><a href="#">주문</a></li>
-        <li><a href="#">자주묻는질문</a></li>
+        <li><a href="/career">경력사항</a></li>
         <li><a href="https://github.com/leeyongyu">GitHub</a></li>
         <li><a href="https://achievegoal.tistory.com">TISTORY</a></li>
       </ul>

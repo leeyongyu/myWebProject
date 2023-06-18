@@ -38,7 +38,7 @@ public class Post {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         post.setFirstRegTime(timestamp);
         post.setFirstRegUser("이용규");
-        post.setTitle("제목 테스트1");
+        post.setTitle("서버 개발자 (HIGHLIGHT 채용)");
 
         post.setPostSpec(postSpec);
 
