@@ -44,4 +44,9 @@ public class Post {
 
         return post;
     }
+
+    public void edit(PostEdit postEdit){
+        this.title = postEdit.getTitle();
+        this.postSpec.setContent(postEdit.getContent());
+    }
 }

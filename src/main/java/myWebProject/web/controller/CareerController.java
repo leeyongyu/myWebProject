@@ -2,6 +2,7 @@ package myWebProject.web.controller;
 
 import lombok.RequiredArgsConstructor;
 import myWebProject.web.domain.Post;
+import myWebProject.web.domain.PostEdit;
 import myWebProject.web.repository.IPostRepository;
 import myWebProject.web.service.IPostService;
 import myWebProject.web.service.PostService;
@@ -9,10 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -40,5 +40,10 @@ public class CareerController {
     public String createCareerPost(Model model){
         postService.createPost();
         return "redirect:/career";
+    }
+
+    @PatchMapping("/{postId}")
+    public void edit(@PathVariable Long postId, @RequestBody @Valid PostEdit postEdit){
+        postService.edit(postId,postEdit);
     }
 }

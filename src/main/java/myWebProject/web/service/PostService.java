@@ -2,6 +2,8 @@ package myWebProject.web.service;
 
 import lombok.RequiredArgsConstructor;
 import myWebProject.web.domain.Post;
+import myWebProject.web.domain.PostEdit;
+import myWebProject.web.domain.PostEditor;
 import myWebProject.web.domain.PostSpec;
 import myWebProject.web.repository.IPostRepository;
 import myWebProject.web.repository.PostRepository;
@@ -35,6 +37,13 @@ public class PostService implements IPostService {
     @Override
     public Post findPostSpec(Long id){
         return postRepository.findPostSpec(id);
+    }
+
+    @Override
+    public void edit(Long id, PostEdit postEdit){
+        Post post = postRepository.findPostSpec(id);
+
+        post.edit(postEdit);
     }
 
 }
