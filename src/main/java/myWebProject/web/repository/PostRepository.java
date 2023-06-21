@@ -38,6 +38,13 @@ public class PostRepository implements IPostRepository{
                 .where(post.postSpec.postSpecCode.eq("01")
                 .and(post.postId.eq(id))).fetchOne();
     }
+    @Override
+    public void deleteById(Long id){
+       queryFactory
+                .delete(post)
+                .where(post.postId.eq(id))
+                .execute();
+    }
 
 
 }

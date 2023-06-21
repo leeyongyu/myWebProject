@@ -1,11 +1,11 @@
 package myWebProject.web.controller;
 
 import lombok.RequiredArgsConstructor;
+import myWebProject.web.domain.PostDto;
 import myWebProject.web.domain.Post;
 import myWebProject.web.domain.PostEdit;
 import myWebProject.web.repository.IPostRepository;
 import myWebProject.web.service.IPostService;
-import myWebProject.web.service.PostService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -17,33 +17,46 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/career")
 public class CareerController {
     private final Logger log = LoggerFactory.getLogger(this.getClass());
     private final IPostRepository postRepository;
     private final IPostService postService;
 
-    @GetMapping
+    @GetMapping("/career")
     public String career(Model model) {
         List<Post> postList = postRepository.findAll();
         model.addAttribute("postItems",postList);
         return "career";
     }
-    @GetMapping("/{postId}")
+
+    @GetMapping("/career/{postId}")
     public String findCareerPost(@PathVariable("postId") Long postId, Model model){
         Post post = postService.findPostSpec(postId);
         model.addAttribute("postItem",post);
         return "careerPost";
     }
 
-    @PostMapping("/new")
-    public String createCareerPost(Model model){
-        postService.createPost();
+    @GetMapping("/career/createForm")
+    public String createForm(Model model) {
+        return "createCareerPost";
+    }
+    @PostMapping("/career/create")
+    public String createCareerPost(Model model , @ModelAttribute("dto") PostDto dto){
+        postService.createPost(dto);
         return "redirect:/career";
     }
 
-    @PatchMapping("/{postId}")
-    public void edit(@PathVariable Long postId, @RequestBody @Valid PostEdit postEdit){
+    @PatchMapping("/career/{postId}")
+    public String edit(@PathVariable Long postId, @ModelAttribute @Valid PostEdit postEdit){
         postService.edit(postId,postEdit);
+
+        return "redirect:/career";
     }
+
+    @DeleteMapping("/career/{postId}")
+    public String delete(@PathVariable("no") @Valid Long postId){
+        postService.delete(postId);
+        return "redirect:/career";
+    }
+
 }

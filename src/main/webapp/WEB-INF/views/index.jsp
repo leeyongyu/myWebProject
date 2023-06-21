@@ -12,7 +12,7 @@
     <article class="post">
       <header>
         <div class="title">
-          <h2><a href="single.html">수행 프로젝트</a></h2>
+          <h2><a href="single.html">메인 화면</a></h2>
           <p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
         </div>
         <div class="meta">

@@ -21,13 +21,6 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("sample")
-    public String sample(HttpServletRequest request, Model model) {
-
-        model.addAttribute("test", "테스트");
-        return "sample";
-    }
-
     @GetMapping("samplePage")
     public String sample2(HttpServletRequest request, Model model) {
 

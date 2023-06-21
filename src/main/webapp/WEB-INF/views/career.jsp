@@ -4,20 +4,15 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
-    <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="/resources/assets/css/main.css" />
-    <link rel="stylesheet" href="/webjars/bootstrap/4.6.0/css/bootstrap.min.css" id="bootstrap-css" />
-    <script async src="/webjars/jquery/3.6.0/jquery.min.js"></script>
-
 </head>
 <body>
     <article id="mArticle">
         <div class="recruit_intro">
             <h3 class="tit_intro">경력사항</h3>
             <div>
-                <form action="/career/new" method="post">
+                <form action="/career/createForm" method="get">
                     <button type="submit">등록</button>
                 </form>
             </div>
