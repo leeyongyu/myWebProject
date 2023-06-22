@@ -33,6 +33,7 @@ public class CareerController {
     public String findCareerPost(@PathVariable("postId") Long postId, Model model){
         Post post = postService.findPostSpec(postId);
         model.addAttribute("postItem",post);
+        model.addAttribute("postId",post.getPostId());
         return "careerPost";
     }
 
@@ -41,20 +42,27 @@ public class CareerController {
         return "createCareerPost";
     }
     @PostMapping("/career/create")
-    public String createCareerPost(Model model , @ModelAttribute("dto") PostDto dto){
+    public String createCareerPost(Model model , @RequestBody @Valid PostDto dto){
         postService.createPost(dto);
         return "redirect:/career";
     }
 
+    @GetMapping("/career/editForm/{postId}")
+    public String editForm(@PathVariable("postId") Long postId, Model model) {
+        Post post = postService.findPostSpec(postId);
+        model.addAttribute("postItem",post);
+
+        return "updateCareerPost";
+    }
     @PatchMapping("/career/{postId}")
-    public String edit(@PathVariable Long postId, @ModelAttribute @Valid PostEdit postEdit){
+    public String edit(@PathVariable Long postId, @RequestBody PostEdit postEdit){
         postService.edit(postId,postEdit);
 
         return "redirect:/career";
     }
 
     @DeleteMapping("/career/{postId}")
-    public String delete(@PathVariable("no") @Valid Long postId){
+    public String delete(@PathVariable @Valid Long postId){
         postService.delete(postId);
         return "redirect:/career";
     }

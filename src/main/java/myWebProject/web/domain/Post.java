@@ -38,5 +38,10 @@ public class Post {
     public void edit(PostEdit postEdit){
         this.title = postEdit.getTitle();
         this.postSpec.setContent(postEdit.getContent());
+        this.postSpec.setContentTitle(postEdit.getContentTitle());
+        this.postSpec.setPostComboName(postEdit.getPostComboName());
+        this.postId = postEdit.getPostId();
+        this.postSpec.setStartDate(postEdit.getStartDate());
+        this.postSpec.setEndDate(postEdit.getEndDate());
     }
 }

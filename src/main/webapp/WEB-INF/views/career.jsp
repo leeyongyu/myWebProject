@@ -13,7 +13,7 @@
             <h3 class="tit_intro">경력사항</h3>
             <div>
                 <form action="/career/createForm" method="get">
-                    <button type="submit">등록</button>
+                    <button type="submit" class="button">등록</button>
                 </form>
             </div>
             <div class="main_search">

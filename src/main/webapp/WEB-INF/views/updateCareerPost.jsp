@@ -9,7 +9,16 @@
 </head>
 <body>
 <script type="text/javascript">
-    function fnCreate(){
+    $(document).ready(function() {
+            $('#title').val("<c:out value="${postItem.title}" />");
+            $('#postComboName').val("<c:out value="${postItem.postSpec.postComboName}" />");
+            $('#contentTitle').val("<c:out value="${postItem.postSpec.contentTitle}" />");
+            $('#content').val("<c:out value="${postItem.postSpec.content}" />");
+            $('#startDate').val("<c:out value="${postItem.postSpec.startDate}" />");
+            $('#endDate').val("<c:out value="${postItem.postSpec.endDate}" />");
+    });
+    var id =  "<c:out value="${postItem.postId}" />"
+    function fnUpdateSend(){
        var param = { "title" : $('#title').val()
                           , "postComboName": $('#postComboName').val()
                           , "contentTitle" : $('#contentTitle').val()
@@ -18,8 +27,8 @@
                           , "endDate" : $('#endDate').val()
                     }
         $.ajax({
-                url: "/career/create",
-                type: "POST",
+                url: "/career/" + id,
+                type: "PATCH",
                 contentType: "application/json; charset=UTF-8",
                 dataType: "json",
                 data: JSON.stringify(param),
@@ -35,10 +44,10 @@
     <article id="mArticle">
         <div class="recruit_detail">
             <div class="col-6 col-12-xsmall">
-                <input type="text" id="title" value="" placeholder="제목을 입력해주세요."/>
+                <input type="text" id="title" value="" placeholder="제목을 입력해주세요."></input>
             </div>
             <div class="col-6 col-12-xsmall">
-                <input type="text" id="postComboName" value="" placeholder="콤보네임을 입력해주세요."/>
+                <input type="text" id="postComboName" value="" placeholder="콤보네임을 입력해주세요."></input>
             </div>
             <div class="cont_desc">
                 <div class="desc_cont">
@@ -68,7 +77,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="button" onclick="fnCreate()">등록</button>
+                    <button class="button" onclick="fnUpdateSend()">변경</button>
                 </div>
             </div>
         </div>

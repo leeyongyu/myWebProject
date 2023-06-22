@@ -9,6 +9,8 @@ import java.sql.Timestamp;
 @Getter
 @Builder
 public class PostEdit {
+    @NotBlank
+    private Long postId;
     @NotBlank(message = "제목은 필수 입력 사항입니다.")
     private String title;
     @NotBlank(message = "소제목은 필수 입력 사항입니다.")
