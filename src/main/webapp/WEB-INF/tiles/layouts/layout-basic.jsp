@@ -6,11 +6,10 @@
 <head>
 	<title>Title</title>
     <meta charset="utf-8" />
+    <script async src="/webjars/jquery/3.6.0/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/resources/assets/css/main.css" />
     <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
-    <script async src="/webjars/jquery/3.6.0/jquery.min.js"></script>
-
 </head>
 <body class="is-preload">
     <div id="wrapper">
