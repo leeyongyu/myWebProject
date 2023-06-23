@@ -1,6 +1,7 @@
 package myWebProject.web.domain;
 
 import lombok.*;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
@@ -14,6 +15,7 @@ import static javax.persistence.FetchType.LAZY;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@DynamicUpdate
 public class Post {
     @Id
     @GeneratedValue
@@ -35,12 +37,11 @@ public class Post {
         postSpec.setPost(this);
     }
 
-    public void edit(PostEdit postEdit){
+    public void setEdit(PostEdit postEdit){
         this.title = postEdit.getTitle();
-        this.postSpec.setContent(postEdit.getContent());
         this.postSpec.setContentTitle(postEdit.getContentTitle());
         this.postSpec.setPostComboName(postEdit.getPostComboName());
-        this.postId = postEdit.getPostId();
+        this.postSpec.setContent(postEdit.getContent());
         this.postSpec.setStartDate(postEdit.getStartDate());
         this.postSpec.setEndDate(postEdit.getEndDate());
     }

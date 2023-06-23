@@ -56,6 +56,7 @@ public class CareerController {
     }
     @PatchMapping("/career/{postId}")
     public String edit(@PathVariable Long postId, @RequestBody PostEdit postEdit){
+
         postService.edit(postId,postEdit);
 
         return "redirect:/career";

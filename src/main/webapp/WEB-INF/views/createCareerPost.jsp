@@ -34,6 +34,7 @@
 </script>
     <article id="mArticle">
         <div class="recruit_detail">
+            <h3 class="tit_intro">경력사항 게시판 등록</h3>
             <div class="col-6 col-12-xsmall">
                 <input type="text" id="title" value="" placeholder="제목을 입력해주세요."/>
             </div>

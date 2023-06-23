@@ -39,7 +39,9 @@ public class PostService implements IPostService {
     public void edit(Long id, PostEdit postEdit){
         Post post = postRepository.findPostSpec(id);
 
-        post.edit(postEdit);
+        post.setEdit(postEdit);
+
+        postRepository.save(post);
     }
 
     @Override
