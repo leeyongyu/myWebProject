@@ -21,6 +21,12 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("loginPage")
+    public String loginPage(HttpServletRequest request, Model model) {
+        model.addAttribute("test", "테스트");
+        return "loginPage";
+    }
+
     @GetMapping("samplePage")
     public String sample2(HttpServletRequest request, Model model) {
 

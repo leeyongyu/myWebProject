@@ -7,6 +7,8 @@
 	<title>Title</title>
     <meta charset="utf-8" />
     <script async src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.2.0/kakao.min.js"
+      integrity="sha384-x+WG2i7pOR+oWb6O5GV5f1KN2Ko6N7PTGPS7UlasYWNxZMKQA63Cj/B2lbUmUfuC" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/resources/assets/css/main.css" />
     <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
